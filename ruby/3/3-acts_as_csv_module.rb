@@ -28,13 +28,43 @@ module ActsAsCsv
         @csv_contents << row.chomp.split(', ')
       end
     end
-    
+
+    #Note: attr_accessor is a macro (ruby community term) which adds get and put methods for these variables
     attr_accessor :headers, :csv_contents
     def initialize
       read 
     end
   end
 end
+
+# Rather than modifying the code, we can just re-open the modules and classes contained therein
+module ActsAsCsv
+  class CsvRow
+    attr_accessor :headers, :row
+
+    def method_missing name, *args
+      idx = headers.index name.to_s
+      if idx != nil
+        row[idx]
+      else
+        super
+      end
+    end
+
+    def initialize(headers, row)
+      @headers = headers
+      @row = row
+    end
+  end
+
+  module InstanceMethods
+    def each(&block)
+      @csv_contents.each{|row| block.call CsvRow.new @headers, row }
+    end
+  end
+end
+
+  
 
 class RubyCsv  # no inheritance! You can mix it in
   include ActsAsCsv
@@ -44,3 +74,10 @@ end
 m = RubyCsv.new
 puts m.headers.inspect
 puts m.csv_contents.inspect
+
+# Test out the new 'each' method for an object that acts as a csv
+m.each do |row|
+  puts "Two:" + row.two
+  puts "Four:" + row.four
+  #puts "Six:" + row.six
+end
