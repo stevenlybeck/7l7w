@@ -23,7 +23,26 @@
 <node CREATED="1394745141313" ID="ID_1354930549" MODIFIED="1394745176211" TEXT="&amp;&amp; and || will execute only till result of test is clear - &amp; and | will execute through entire test"/>
 </node>
 </node>
-<node CREATED="1394744749676" ID="ID_1388217356" MODIFIED="1394744750192" POSITION="right" TEXT="io"/>
+<node CREATED="1394744749676" ID="ID_1388217356" MODIFIED="1394744750192" POSITION="right" TEXT="io">
+<node CREATED="1395183152605" ID="ID_1774677231" MODIFIED="1395183153986" TEXT="typing">
+<node CREATED="1395186717154" ID="ID_6781031" MODIFIED="1395186723391" TEXT="dynamic - checked when code is executed"/>
+<node CREATED="1395186723618" ID="ID_963580505" MODIFIED="1395186725197" TEXT="strong">
+<node CREATED="1395186725198" ID="ID_1177064762" MODIFIED="1395186734317" TEXT="types must match and are not automatically coerced"/>
+<node CREATED="1395186776889" ID="ID_1617458069" MODIFIED="1395186791836" TEXT="note: presence of a concatenation operator .. - does this indicate strong typing?"/>
+</node>
+</node>
+<node CREATED="1395183154256" ID="ID_520654055" MODIFIED="1395183155617" TEXT="execution">
+<node CREATED="1395186095383" ID="ID_612525643" MODIFIED="1395186097414" TEXT="interpreted"/>
+</node>
+<node CREATED="1395183155856" ID="ID_1196366805" MODIFIED="1395183158638" TEXT="programming model">
+<node CREATED="1395183228400" ID="ID_956264276" MODIFIED="1395183239296" TEXT="prototype-based objects">
+<node CREATED="1395183245016" ID="ID_109158909" MODIFIED="1395183256095" TEXT="every object is a clone of an existing object"/>
+</node>
+</node>
+<node CREATED="1395186085609" ID="ID_73713808" MODIFIED="1395186088996" TEXT="Style guide">
+<node CREATED="1395186093081" ID="ID_1471818739" LINK="http://en.wikibooks.org/wiki/Io_Programming/Io_Style_Guide" MODIFIED="1395186093081" TEXT="en.wikibooks.org &gt; Wiki &gt; Io Programming &gt; Io Style Guide"/>
+</node>
+</node>
 <node CREATED="1394744748228" ID="ID_749477845" MODIFIED="1394744749432" POSITION="right" TEXT="prolog"/>
 <node CREATED="1394744787364" ID="ID_1975322531" MODIFIED="1394744791068" POSITION="right" TEXT="scala"/>
 <node CREATED="1394744753644" FOLDED="true" ID="ID_708749346" MODIFIED="1394840701737" POSITION="right" TEXT="erlang">
